@@ -11,7 +11,7 @@ class InterviewProcessor:
     Controls: "skip", "repeat", "stop interview"
     """
 
-    SILENCE_SECONDS = 5.0
+    SILENCE_SECONDS = 10.0
 
     def __init__(self, tts):
         self.tts = tts
@@ -121,8 +121,16 @@ class InterviewProcessor:
             if "challenging problem" in q.lower() and ("impact" not in low and "result" not in low):
                 followup += " Also cover the impact or result in one line."
 
-            self.tts.speak(self._ack(low) + "Next question." + followup)
-            self._ask_next()
+            if self.i + 1 >= len(self.q):
+                self.transcript.append((q, answer))
+                self.tts.speak(self._ack(low) + "That’s all I had. We’ll review your answers and our HR will contact you soon.", block=True)
+                self.active = False
+                self._save_transcript()
+                os._exit(0)  
+            else:
+                self.transcript.append((q, answer))
+                self.tts.speak(self._ack(low) + "Next question." + followup)
+                self._ask_next()
 
     # Public entry: receive user text chunks from STT
     def process_input(self, text: str):
@@ -153,6 +161,14 @@ class InterviewProcessor:
         # Otherwise, treat as part of the current answer.
         with self._lock:
             self._answer_buf.append(text)
+
+        # Check if user said something like "that's it" or "I'm done"
+        end_keywords = ["that's it", "i'm done", "that is all", "i'm finished", "that's all"]
+        if any(k in low for k in end_keywords):
+            self._cancel_timer()
+            self._finalize_answer_if_any()
+            return "finalized"
+
         # Restart silence timer on every chunk
-        self._schedule_finalize()
-        return "collecting"
+            self._schedule_finalize()
+            return "collecting"
