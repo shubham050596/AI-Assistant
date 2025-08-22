@@ -4,7 +4,7 @@ import queue
 
 class TextToSpeech:
     """Threaded pyttsx3 with start/stop hooks so we can pause STT while speaking."""
-    def __init__(self, rate=150, voice_index=1, on_start=None, on_end=None):
+    def __init__(self, rate=150, voice_index=0, on_start=None, on_end=None):
         self.rate = rate
         self.voice_index = voice_index
         self.on_start = on_start
