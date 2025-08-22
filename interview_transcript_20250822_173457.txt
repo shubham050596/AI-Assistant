@@ -1,6 +1,0 @@
-Q1: Tell me about yourself.
-A1: via Focus software developer with 3 plus C-era of X-era. building scalable cloud native solution across financial healthcare and smart analytics. My core expertise is Lening Python Machine Learning. and building genai application using framework. like, lengthen face and crew wear. That's it.
-
-Q2: What are your top strengths for this role? Give one example.
-A2: One of my top strength is building a production rate. and a system using real-world data. and open source tools. I specialize in lm Integration Vector Search Rageapply. Multi agent system, another strength my ability to transfer business into AF. workflow. Combining Technical Scale with Outcomp. focus thinking. That's it.
-
