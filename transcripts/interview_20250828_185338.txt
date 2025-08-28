@@ -1,0 +1,9 @@
+Q1: Tell me about yourself.
+A1: Hanson now. So, I am a focus software developer with 3 plus years of experience building. and scale level in 8-2 solution across the financial level. health care and smart analytics. My core expertise is lies in python, machine learning and building application using framework like link genfx. and create a new layer. That's it.
+
+Q2: Describe a time you investigated discrepancies between forecasted and actual values in a project.
+A2: So basically I make a lot of thing during up forecasting and actual value. I'm facing hallucination. recently I developed a medical chain, what using regar critake and what it Agency. It was about powered by an open source. I don't know. That's it.
+
+Q3: How have you used time series analysis to improve forecasting accuracy?
+A3: So basically I use the time series of in below forecasting with the help of path. Hmm, he has that set. That's it.
+

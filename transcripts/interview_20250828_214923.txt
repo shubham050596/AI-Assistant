@@ -1,0 +1,9 @@
+Q1: Tell me about yourself.
+A1: So yeah, sure I am sorry Yeah, I have, I am a year of focus. software developer with 3 plus years of experience. building scalable cloud native solution across financial health care and smart analytics. That's it
+
+Q2: Describe your experience with ARIMA or SARIMA models in time series forecasting.
+A2: So I do also turn touch or do speed for optimizing transfer. normal execution and enable patch in if applicable if use using a transformer like bird. That's it
+
+Q3: Explain how you've handled missing data in time series datasets.
+A3: diffusion model generate overall smooth image. My first adjustment will be to wing. the noise schedule or denoising steps. That's it.
+

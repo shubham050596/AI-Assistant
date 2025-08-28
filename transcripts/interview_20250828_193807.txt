@@ -1,0 +1,9 @@
+Q1: Tell me about yourself.
+A1: focus often available with 3 plus the year of experience building scalable cloud networks. across financial healthcare and smart analytics. That's it.
+
+Q2: Explain how you improved ETA accuracy using regression and time series analysis.
+A2: I was already using lots of ETA technology to improve accuracy and time series and listening during a production. Yeah, that's it.
+
+Q3: How did you use LLMs to assist farmers with queries in your AgriCart project?
+A3: I use hugging face for this 2 extra that contains lllmodel for as a farmer with curies. Yeah, that's it.
+
