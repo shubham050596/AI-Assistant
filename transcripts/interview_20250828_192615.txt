@@ -1,9 +1,0 @@
-Q1: Tell me about yourself.
-A1: AF focus of the developer with 3 plus year of experience building scale level cloud net resolution across financial health care and smart-trick analytics. That's it.
-
-Q2: Explain how you improved ETA accuracy by 30% using time series analysis at Technopurple IT Solutions.
-A2: developed by medical child board using a rigour, guttake and multi-gen soap. financial disabled powered by an open source lllm. That's it.
-
-Q3: Describe your experience using LSTMs for time series forecasting.
-A3: For example, in the memory cache, I... use a link chain open here in face to build our will augment generation system, yeah that's it.
-

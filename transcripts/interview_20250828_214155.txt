@@ -1,9 +1,0 @@
-Q1: Tell me about yourself.
-A1: So AME I am a focus of the developer with 3 plus year of experience building scalable cloud network. to solution across financial healthcare smart analytics. That's it
-
-Q2: Describe a situation where you had to improve the accuracy of a time series forecasting model.
-A2: So in my medical chat bar project i use link chain open ei in fair store build Retrieval Augment Generation System. improve answer relevance by 50%. That's it
-
-Q3: How have you used feature engineering to improve the performance of a forecasting model?
-A3: Basically I work across and will be competitive version and generative in multiple In NLP, I build a medical chatbot. using blank chain open air infest. to contextual accuracy. by 40% That's it.
-

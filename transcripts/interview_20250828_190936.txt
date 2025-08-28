@@ -1,9 +1,0 @@
-Q1: Tell me about yourself.
-A1: I am AF Focus Octa developer with 4D of experience building scalable cloud network. solution across financial health care. and smart analytics. My core expertise. Lies in Python, Machine Learning and Building Gen app. using Framework like Lengthen, Fares and Cruel that is it. That's it.
-
-Q2: Describe a time you investigated a discrepancy between forecasted and actual results.
-A2: I investigate lots of time for... description between forecast and actual result. with the help of your total present in Python like. Yeah, that's it.
-
-Q3: How have you used feature engineering to improve time series model performance?
-A3: I use so many feature engine things to improve what I am. series based on the project requirement. Yeah, that's it
-

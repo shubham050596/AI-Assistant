@@ -1,9 +1,0 @@
-Q1: Tell me about yourself.
-A1: I am a focus of the developer with four years of work. I'll explain. Building up. scalable cloud network solution across Padai. cell healthcare and smart analytics. My core is Next, what will lie in Python, Machine Learning and Building Gen. application using framework like link in the description. Lengthen first and crew your eye. That's it.
-
-Q2: Describe a time you had to investigate a discrepancy between a forecast and actual data.
-A2: I have enlisting a lot of time. between a forecast and actual data based on the data what we got from the client. Let's hit. That's it.
-
-Q3: How have you used feature engineering to improve the accuracy of a forecasting model?
-A3: ah, far improving feature engine V create one function in that web all the values to. feature the particular functions. Yeah, that's it
-
