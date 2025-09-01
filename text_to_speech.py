@@ -1,6 +1,15 @@
 import pyttsx3
+import os
 import threading
 import queue
+from sarvamai import SarvamAI
+from sarvamai.play import play
+from dotenv import load_dotenv
+load_dotenv()
+
+client = SarvamAI(
+    api_subscription_key=os.environ.get("SARVAMAI_API_KEY")
+)
 
 class TextToSpeech:
     """Threaded pyttsx3 with start/stop hooks so we can pause STT while speaking."""
@@ -16,14 +25,20 @@ class TextToSpeech:
         self.thread.start()
 
     def _speak_once(self, text: str):
-        engine = pyttsx3.init()
-        engine.setProperty('rate', self.rate)
-        voices = engine.getProperty('voices')
-        if 0 <= self.voice_index < len(voices):
-            engine.setProperty('voice', voices[self.voice_index].id)
-        engine.say(text)
-        engine.runAndWait()
-        engine.stop()
+        # engine = pyttsx3.init()
+        # engine.setProperty('rate', self.rate)
+        # voices = engine.getProperty('voices')
+        # if 0 <= self.voice_index < len(voices):
+        #     engine.setProperty('voice', voices[self.voice_index].id)
+        # engine.say(text)
+        # engine.runAndWait()
+        # engine.stop()
+        audio_data = client.text_to_speech.convert(
+            text=text,
+            target_language_code="en-IN",
+            enable_preprocessing=True
+        )
+        play(audio_data)
 
     def _run_loop(self):
         while True:

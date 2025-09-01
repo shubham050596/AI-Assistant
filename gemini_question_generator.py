@@ -17,12 +17,26 @@ model = genai.GenerativeModel("models/gemini-2.0-flash")
 
 
 def generate_followup_question(answer: str) -> str:
-    prompt = (
-        "Given the candidate's answer in an interview, suggest the next logical follow-up interview question. "
-        "Be concise and job-relevant.\n\n"
-        f"Answer: {answer}\n\n"
-        "Follow-up Question:"
-    )
+    prompt = f"""
+        SYSTEM: ```
+        You are a professional technical recruiter. 
+        You are very experienced in conducting professional interviews of candidates based on their role and the job's description.
+        Your task is to generate a follow-up interview question based on the candidate's previous answer.
+        ```
+
+        INSTRUCTIONS: ```
+        * Create concise, role-specific follow-up question. 
+        * Return one question in a single line.
+        * Keep the question specific and based on the previous answer.
+        * Only give the question and no additional text in the output.
+        ```
+
+        Answer: ```{answer}```
+
+        FORMAT: ```
+Question
+        ```
+    """
     try:
         resp = model.generate_content(prompt)
         return (getattr(resp, "text", "") or "").strip()
@@ -32,14 +46,31 @@ def generate_followup_question(answer: str) -> str:
 
 
 def generate_seed_questions(resume_text: str, jd_text: str, n: int = 3) -> list[str]:
-    prompt = (
-        "You are an interviewer. Using the candidate resume and the job description, "
-        "write concise, role-relevant interview questions. Avoid duplicates and keep them specific. "
-        "Return one question per line with no numbering.\n\n"
-        f"RESUME:\n{(resume_text or '')[:8000]}\n\n"
-        f"JOB DESCRIPTION:\n{(jd_text or '')[:8000]}\n\n"
-        f"Write {n} questions:"
-    )
+    prompt = f"""
+        SYSTEM: ```
+        You are a professional technical recruiter. 
+        You are very experienced in conducting professional interviews of candidates based on their role and the job's description.
+        Your task is to generate role-specific interview questions based on the provided resume and job description.
+        ```
+        INSTRUCTIONS: ```
+        * Create concise, role-specific questions. 
+        * Avoid duplicates of questions.
+        * Return one question per line without numbering
+        * Keep questions specific to the role and context.
+        * Ensure to generate {n} questions.
+        * Only give the questions and no additional text in the output.
+        ```
+
+        RESUME: ```{(resume_text or '')[:8000]}```
+        JOB DESCRIPTION: ```{(jd_text or '')[:8000]}```
+
+        FORMAT: ```
+Question-1
+Question-2
+...
+Question-n
+        ```
+    """
     try:
         resp = model.generate_content(prompt)
         text = (getattr(resp, "text", "") or "").strip()

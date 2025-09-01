@@ -6,3 +6,4 @@ pyttsx3==2.90
 google-generativeai #gemini
 pdfminer.six==20240706      # for PDFs (optional but recommended)
 python-docx==1.1.2        # for Word documents (optional but recommended)
+python-dotenv
